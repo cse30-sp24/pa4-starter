@@ -1,0 +1,56 @@
+/*
+ * setorder
+ *
+ * usage:   argv array passed to main(): command name + arg list
+ *          each argument is a column number of a column that will be output
+ *          (1) convert each argument to an integer using strtol()
+ *          make sure that you use strtol() and check the conversion as
+ *          described in the PA writeup. If there is an error, print an error
+ *          message and return -1
+ *          (2) Each converted value is checked to be in the range 1 to maxcol
+ *          print an error message and return -1 if not
+ *          (3) The converted value is adjusted to be an array index and is
+ *          stored in the array indxtab in the same order the args are listed
+ *          in argv.
+ *          (4) If the number of args is greater than maxcol print an error
+ *          message and return -1
+ *          (5) Otherwise all ok, Return the number of entries in the array tab
+ *
+ * arguments:
+ * argv     argv array of pointers to strings as passed to main()
+ * indxtab  points at an int array. Each entry contains an index value into the
+ *          split row array of pointers
+ * tabsz    the size of the array indxtab
+ * maxcol   number of columns in a row (no arg can be greater than this value)
+ *
+ * Return values:
+ *           -1 if if any error is detected
+ *           otherwise return the number of entries stored in indxtab
+ *
+ * error messages:
+ *	     this function writes error messages to stderr
+ */
+
+#include "version.h"
+#ifndef MYSETORDER
+#warning("WARNING - USING THE SOLUTION setorder.c NOT MY CODE")
+#else
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/errno.h>
+#include "setorder.h"
+
+int setorder(char **argv, int *indxtab, int tabsz, int maxcol)
+{
+// replace with your code
+
+/*
+ * the error messages for use in this file
+ * fprintf(stderr, "%s: improper argument: %s\n", *argv, *ptrargv);
+ * fprintf(stderr, "%s: at least one column must be specified\n", *argv);
+ * fprintf(stderr, "%s: too many arguments %d max\n", *argv, tabsz);
+ * fprintf(stderr, "usage: %s col [col ...]\n", *argv);
+ */
+
+}
+#endif // do not delete this line
