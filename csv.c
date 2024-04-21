@@ -41,7 +41,7 @@
 // These three values are too small for real use.
 #define BUFSZ   128             // row buffer size
 #define MAXCOL  8               // Max number of columns in a row
-#define MAXARG  16              // Max number of output columns
+#define MAXARG  8               // Max number of output columns
 
 /*
  * csv main function
