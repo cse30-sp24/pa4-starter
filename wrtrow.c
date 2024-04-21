@@ -1,20 +1,22 @@
 /*
  * wrtrow
  *
- * usage:   (1) passed an array of pointers to columns (ptable),
- *          (2) passed an array of columns to output in order from 
- *          low to high index (coltab)
- *          (3) passed count of output columns in coltab
- *          (4) output each column as pointed at by each entry in ptable the
- *          order the elements are selected is the contents of coltab
- *          you can use printf to output the column data and the delimiters
+ * usage:   Writes a CSV row to the output. The columns in the output row
+ *          are selected columns from the input row. The columns selected for
+ *          output are contained in the entries in coltab. The order of columns
+ *          in the output row is from element 0 to element cnt-1 in coltab.
+ *          An array of pointers to each of the input columns is used to output
+ *          the column's data.
+ *          Note: Use printf to output the column data and the delimiters
  *
  * arguments:
- *  ptable  points at array of pointers each element points at a column data
- *  coltab  points array of ints, each element is an index in ptable in output
- *          order
+ *  ptable  points at array of pointers, each element points at a single columns
+ *          data
+ *  coltab  points array of ints, each element is an offset into ptable. The order
+ *          of elements in the array specifies the column order in the output
+ *          row
  *  cnt     number of elements in array coltab
- *  delim   the output field delimiter to use
+ *  delim   the output column delimiter to use
  *
  * Return values:
  *          -1 if if an error is detected (printf fails)
