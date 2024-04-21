@@ -8,18 +8,19 @@
  *          there is an error, print an error message and return -1
  *          (2) Each converted value is checked to be in the range 1 to maxcol
  *          print an error message and return -1 if not
- *          (3) The converted value is adjusted to be an array index and is
- *          stored in the array indxtab in the same order the args are listed
- *          in argv.
+ *          (3) The converted value is adjusted to be an array offset value
+ *          and is stored in the array coltab in the same order the args are
+ *          listed in argv.
  *          (4) If the number of args is greater than maxcol print an error
  *          message and return -1
- *          (5) Otherwise all ok, Return the number of entries in indxtab
+ *          (5) Otherwise all ok, return the number of entries in indxtab
  *
  * arguments:
  * argv     argv array of pointers to strings as passed to main()
- * indxtab  points at an int array. Each entry contains an index value into the
- *          split row array of pointers
- * tabsz    the size of the array indxtab
+ * coltab   points at an int array. Each entry specifies an input row
+ *          column to be output. The order the columns appear in coltab
+ *          is the order of the columns in the output row
+ * tabsz    the size (number of elements) in the array coltab
  * maxcol   number of columns in a row (no arg can be greater than this value)
  *
  * Return values:
@@ -39,7 +40,7 @@
 #include <sys/errno.h>
 #include "setorder.h"
 
-int setorder(char **argv, int *indxtab, int tabsz, int maxcol)
+int setorder(char **argv, int *coltab, int tabsz, int maxcol)
 {
 // replace with your code
 
