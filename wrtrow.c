@@ -3,8 +3,8 @@
  *
  * usage:   Writes a CSV row to the output. The columns in the output row
  *          are selected columns from the input row. The columns selected for
- *          output are contained in the entries in indxtab. The order of columns
- *          in the output row is from element 0 to element cnt-1 in indxtab.
+ *          output are contained in the entries in coltab. The order of columns
+ *          in the output row is from element 0 to element cnt-1 in coltab.
  *          An array of pointers to each of the input columns is used to output
  *          the column's data.
  *          Note: Use printf to output the column data and the delimiters
@@ -15,7 +15,7 @@
  *  indxtab points array of ints, each element is an offset into ptable. The order
  *          of elements in the array specifies the column order in the output
  *          row
- *  cnt     number of elements in array indxtab
+ *  cnt     number of elements in array coltab
  *  delim   the output column delimiter to use
  *
  * Return values:
@@ -34,7 +34,7 @@
 #include "wrtrow.h"
 
 int
-wrtrow(char **ptable, int *indxtab, int cnt, char delim)
+wrtrow(char **ptable, int *coltab, int cnt, char delim)
         
 {
     // replace with your code
