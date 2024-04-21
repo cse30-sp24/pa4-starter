@@ -4,9 +4,8 @@
  * usage:   argv array passed to main(): command name + arg list
  *          each argument is a column number of a column that will be output
  *          (1) convert each argument to an integer using strtol()
- *          make sure that you use strtol() and check the conversion as
- *          described in the PA writeup. If there is an error, print an error
- *          message and return -1
+ *          and check the conversion as described in the PA writeup. If 
+ *          there is an error, print an error message and return -1
  *          (2) Each converted value is checked to be in the range 1 to maxcol
  *          print an error message and return -1 if not
  *          (3) The converted value is adjusted to be an array index and is
@@ -14,7 +13,7 @@
  *          in argv.
  *          (4) If the number of args is greater than maxcol print an error
  *          message and return -1
- *          (5) Otherwise all ok, Return the number of entries in the array tab
+ *          (5) Otherwise all ok, Return the number of entries in indxtab
  *
  * arguments:
  * argv     argv array of pointers to strings as passed to main()
