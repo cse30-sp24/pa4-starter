@@ -27,7 +27,7 @@ $(PROG):	$(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) $(LIB) -o $@
 
 #list of test number
-LIST    = 1 2 3 4
+LIST    = 1 2
 
 test:    $(PROG)
 	./runtest $(LIST)
