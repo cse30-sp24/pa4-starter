@@ -70,7 +70,7 @@ main(int argc, char **argv)
     /*
      * the error messages for use in this file
      *
-    fprintf(stderr, "%s: Header row error\n", *argv);
+    fprintf(stderr, "%s: Header row input error\n", *argv);
     fprintf(stderr, "%s: Header row output failure, exiting\n", *argv);
     fprintf(stderr, "%s: Dropped input row %lu\n", *argv, rowcount);
     fprintf(stderr, "%s: Dropped output row %lu\n", *argv, rowcount);
