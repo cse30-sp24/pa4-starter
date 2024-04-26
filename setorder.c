@@ -13,7 +13,7 @@
  *          listed in argv.
  *          (4) If the number of args is greater than maxcol print an error
  *          message and return -1
- *          (5) Otherwise all ok, return the number of entries in indxtab
+ *          (5) Otherwise all ok, return the number of entries in coltab
  *
  * arguments:
  * argv     argv array of pointers to strings as passed to main()
@@ -25,7 +25,7 @@
  *
  * Return values:
  *           -1 if if any error is detected
- *           otherwise return the number of entries stored in indxtab
+ *           otherwise return the number of entries stored in coltab
  *
  * error messages:
  *	     this function writes error messages to stderr
