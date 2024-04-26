@@ -47,6 +47,7 @@ int setorder(char **argv, int *coltab, int tabsz, int maxcol)
 /*
  * the error messages for use in this file
  * fprintf(stderr, "%s: improper argument: %s\n", *argv, *ptrargv);
+ * in the above ptargv is the specific arg in argv that was in error
  * fprintf(stderr, "%s: at least one column must be specified\n", *argv);
  * fprintf(stderr, "%s: too many arguments %d max\n", *argv, tabsz);
  * fprintf(stderr, "usage: %s col [col ...]\n", *argv);
