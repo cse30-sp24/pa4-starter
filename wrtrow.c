@@ -12,7 +12,7 @@
  * arguments:
  *  ptable  points at array of pointers, each element points at a single columns
  *          data
- *  indxtab points array of ints, each element is an offset into ptable. The order
+ *  coltab points array of ints, each element is an offset into ptable. The order
  *          of elements in the array specifies the column order in the output
  *          row
  *  cnt     number of elements in array coltab
